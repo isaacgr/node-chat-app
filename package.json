@@ -4,9 +4,16 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node server/server.js"
+    "start": "node server/server.js",
+    "test": "mocha server/**/*test.js",
+    "test-watch": "nodemon --exec 'yarn test'"
   },
   "dependencies": {
     "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "expect": "^23.6.0",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.4"
   }
 }

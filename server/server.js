@@ -2,7 +2,7 @@ const path = require("path");
 const express = require("express");
 const socketIO = require("socket.io");
 const http = require("http");
-const { generateMessage } = require("./utils/message");
+const { generateMessage, generateLocationMessage } = require("./utils/message");
 
 const publicPath = path.join(__dirname, "../public");
 const app = express();
@@ -38,6 +38,12 @@ io.on("connection", socket => {
     //   text: data.text,
     //   createdAt: new Date().getTime()
     // });
+  });
+  socket.on("createLocationMessage", coords => {
+    io.emit(
+      "newLocationMessage",
+      generateLocationMessage("admin", coords.latitude, coords.longitude)
+    );
   });
 });
 

@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/bin/node /usr/local/bin/yarn test
+  /usr/bin/node /usr/local/bin/yarn run test
 
 PATH: 
   /home/isaac/anaconda3/bin:/home/isaac/bin:/home/isaac/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/isaac/.config/composer/vendor/bin/:/home/isaac/.config/composer/vendor/bin/:/home/isaac/.yarn/bin
@@ -26,6 +26,7 @@ npm manifest:
     },
     "dependencies": {
       "express": "^4.16.3",
+      "moment": "^2.22.2",
       "socket.io": "^2.1.1"
     },
     "devDependencies": {
@@ -1427,6 +1428,10 @@ Lockfile:
       minimatch "3.0.4"
       mkdirp "0.5.1"
       supports-color "5.4.0"
+  
+  moment@^2.22.2:
+    version "2.22.2"
+    resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
   
   ms@2.0.0:
     version "2.0.0"
